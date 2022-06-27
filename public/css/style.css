@@ -1,0 +1,253 @@
+@import url('https://fonts.googleapis.com/css2?family=Piazzolla:ital,opsz,wght@0,8..30,200;0,8..30,800;1,8..30,400&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Piazzolla', serif;
+
+}
+
+:root {
+    --main--bg: #1e272e;
+    --main--color: #0097e6;
+
+}
+
+html{
+    font-size: 62.5%;
+}
+body{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    /* background: url(../images/bg.jpg) no-repeat center center fixed; */
+    /* background-size: cover; */
+    backdrop-filter: blur(2px);
+
+}
+
+.row{
+    margin: 0;
+}
+
+.main_menu{
+    background-color: var(--main--bg);
+}
+.navbar{
+    color: #fff;
+    background-color: var(--main--bg);
+    padding: 1rem;
+}
+.navbar li{
+    margin-left: 2rem;
+}
+.navbar li a{
+    color: white;
+}
+
+
+.navbar a{
+    font-size: 2.5rem
+}
+.navbar-toggler{
+    background-color: grey;
+}
+
+.navbar li a:hover{
+    color: var(--main--color);
+}
+
+.fa-duotone {
+    color: var(--main--color);
+    animation: blinker 1s linear infinite;
+  }
+  
+  @keyframes blinker {
+    50% {
+      opacity: 7;
+      color: green;
+    }
+  }
+
+/* main header */
+.main_header_left{
+   height: 80rem; 
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: flex-start;
+}
+
+.main_header_left p{
+    font-size: 2rem;
+}
+
+.main_header_left h1{
+    font-size: 4rem;
+    text-shadow: 4px 2px 40px #323131;
+    margin: 1rem 0 4rem 0;
+    text-transform: capitalize;
+
+}
+.main_header_left .text_clr{
+    color: var(--main--color);
+}
+.main_header_left button{
+    border: none;
+    padding: .8rem 1.8rem;
+    font-size: 1.4rem;
+    border-radius: 2rem;
+    text-transform: uppercase;
+    box-shadow:0 8px 2px -6px #000
+}
+.main_header_left button:hover{
+    box-shadow: 0 8px 2px -6px var(--main--color);
+}
+
+/* weather page style */
+
+/* input fields */
+.temp_form{
+    width: 60%;
+    position: relative;
+    margin: 10rem auto 6rem;
+}
+.temp_form input[type="text"]{
+    width: 100%;
+    padding: 2rem 5rem 2rem 2rem;
+    background: #1e202b;
+    color: white;
+    outline: none;
+    border: none;
+    font-size: 1.7rem;
+    border-radius: 3rem;
+}
+::placeholder{
+    color: #bfc1c8;
+}
+.temp_form input[type="submit"]{
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    bottom: 5px;
+    border: none;
+    background: #009ad8;
+    padding: 0 3rem;
+    border-radius: 3rem;
+    color: white;
+    font-size: 1.6rem;
+}
+.temp_form input[type="submit"]:hover{
+    color: #009ad8;
+    background-color: #fff;
+}
+/* info area style */
+.tempInformation{
+    width: 40rem;
+    margin: auto;
+    min-height: 20rem;
+    background-color: #323544;
+    border-radius: 1rem;
+    padding: 1rem;
+    font-family: "Roboto", sans-serif;
+}
+
+.top_layer{
+    width: 100%;
+    height: 20%;
+    background-color: red;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 1rem;
+}
+.top_layer p{
+    color: white;
+    font-weight: 300;
+    padding: 2rem ;
+    font-size: large;
+}
+.main_layer{
+    width: 100%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 1rem;
+}
+.main_layer #city_name{
+    padding: 2rem 0;
+    color: #bfc1c8;
+    font-weight: 300;
+    font-size: 2rem;
+}
+.main_layer .middle_layer{
+    display: flex;
+    justify-content: space-between;
+    color: #fff;
+}
+.main_layer .middle_layer p,
+.main_layer .middle_layer .fa{
+    font-size: 7rem;
+    font-weight: 900;
+}
+.fa{
+    color: #009ad8;
+}
+sup {
+    font-size: 6rem;
+    margin-top: -2rem;
+}
+.data_hide {
+    visibility: hidden;
+    transition: all 0.3s linear;
+}
+
+
+/* till hear */
+
+/* for 404 page style*/
+.align-item{
+    align-items: center;
+}
+
+.main_header_right{
+    height: 80rem; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+.slide-size img{
+    height: 60rem;
+    width: 40rem;
+}
+
+
+.main_header_right figure img{
+    filter: drop-shadow(0 0.5rem 1rem rgba(0, 0, 0, 0.4));
+}
+
+/* footer section  */
+footer div{
+    background-color: var(--main--bg);
+}
+
+footer div a{
+    text-decoration: none;
+    font-size: 1.5rem;
+}
+
+
+/* responsive code section */
+@media (max-width: 768px) {
+    .main_header_left {
+        height: auto;
+        margin: 5rem 0;
+    }
+
+    .main_header_right {
+        height: auto;
+        margin: 3rem 0;
+    }
+}
